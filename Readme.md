@@ -1,77 +1,236 @@
-🏥 Medical Cost Personal Dataset Analizi
+# 🏥 Medical Cost Personal Dataset Analysis
 
-📊 Veri Seti Genel Bakış
+<div align="center">
+  <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=300&fit=crop&crop=center" width="700" alt="Healthcare Analytics Banner"/>
+  
+  <h3>💰 Healthcare Expenditure Intelligence & Risk Assessment</h3>
+  
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
+  <img src="https://img.shields.io/badge/Healthcare-DC143C?style=for-the-badge&logo=heart&logoColor=white" alt="Healthcare"/>
+</div>
 
-- Bu veri seti, bireylerin kişisel özellikleri ve yaşam tarzı seçimlerine bağlı olarak sağlık harcamalarını içermektedir. Yaş, cinsiyet, vücut kitle indeksi (BMI), çocuk sayısı, sigara içme durumu, yaşanılan bölge ve sağlık harcamaları gibi çeşitli özellikler yer almaktadır. Bu veri seti, sağlık harcamalarına etki eden faktörlerin analiz edilmesi ve bireylerin tıbbi masraflarının genel etkilerinin anlaşılması amacıyla kullanılır.
+---
 
-🔎 Sütunlar:
+## 🎯 Project Overview
 
-- yaş: Bireyin yaşı (sayısal).
-- cinsiyet: Bireyin cinsiyeti (kategorik: 'erkek', 'kadın').
-- bmi: Vücut Kitle İndeksi (sayısal), bireyin vücut ağırlığının boyla olan oranını gösteren değer.
-- çocuklar: Sigorta kapsamında olan çocuk ya da bağımlı sayısı (sayısal).
-- sigara: Bireyin sigara içip içmediği (kategorik: 'evet', 'hayır').
-- bölge: Bireyin yaşadığı coğrafi bölge (kategorik: 'güneybatı', 'güneydoğu', 'kuzeybatı', 'kuzeydoğu').
-- harcamalar: Bireyin sağlık harcamaları (sayısal, USD cinsinden).
+**💡 Mission:** Decode the hidden patterns in healthcare spending through comprehensive data analysis  
+**🔍 Focus:** Personal characteristics & lifestyle factors impacting medical costs  
+**📊 Impact:** Data-driven insights for healthcare planning and risk assessment
 
-- 🎯 Amaç
+<div align="center">
 
-- Bu analizdeki ana hedef, sağlık harcamalarına etki eden temel faktörleri keşfetmektir. Analiz amacıyla şunlar yapılacaktır:
+### 📈 Key Research Questions
+| Question | Focus Area | Business Value |
+|----------|------------|----------------|
+| **💰 Cost Drivers** | What factors increase medical costs? | Risk assessment |
+| **🚬 Lifestyle Impact** | How does smoking affect expenses? | Prevention strategies |
+| **🗺️ Regional Patterns** | Geographic cost variations? | Market analysis |
+| **👨‍👩‍👧‍👦 Family Influence** | Children's impact on costs? | Family planning |
 
-- Yaş, cinsiyet, bmi ve diğer faktörlerin harcamalar ile ilişkisi keşfedilecektir.
-- Bölge ve sigara içme durumuna göre sağlık harcamalarıyla ilgili eğilimler belirlenecektir.
-- Çocuk sayısı ve bmi’nin sağlık harcamalarına etkisi anlaşılacaktır.
+</div>
 
-- 🛠️ Yöntem
+---
 
-- Veri Temizleme: Eksik değerler, aykırı değerler ve format hataları giderilecektir.
-- Tanımlayıcı İstatistikler: İlişkilerin daha iyi anlaşılması için özet istatistikler ve görselleştirmeler yapılacaktır.
-- Korelasyon Analizi: Sağlık harcamaları ile hangi faktörlerin güçlü korelasyona sahip olduğu belirlenecektir.
+## 📊 Dataset Deep Dive
 
-- 📚 Kullanılan Araçlar ve Kütüphaneler
+<table>
+<tr>
+<td width="50%">
 
-- Python: Pandas, NumPy, Matplotlib, Seaborn
-- Jupyter Notebook: Analiz ve görselleştirme
+### 👤 **Personal Demographics**
+- **📅 Age**: Individual age distribution
+- **⚤ Gender**: Male vs Female analysis  
+- **📏 BMI**: Body Mass Index correlation
+- **👶 Children**: Dependents count impact
 
-## 🛠 Tools & Technologies
-| Pandas | Numpy | Matplotlib | Seaborn |
-|-------|--------|------------|---------|
-| <p align="center"><a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" title="Pandas" width="45" height="45"/> </a></p> |<p align="center"><img src="https://github.com/devicons/devicon/blob/master/icons/numpy/numpy-original-wordmark.svg" title="Numpy" alt="Numpy" width="65" height="65"/></p> | <img src="https://github.com/devicons/devicon/blob/master/icons/matplotlib/matplotlib-original.svg" alt="mpl" title="Matplotlib" width="40" height="40"/></p> | <p align="center"><a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" title="Seaborn" width="45" height="45"/> </a></p>
+</td>
+<td width="50%">
 
-                            - ENG - 
+### 🌍 **Lifestyle & Location**
+- **🚬 Smoking Status**: Health behavior analysis
+- **🗺️ Region**: Geographic cost patterns
+- **💵 Expenditures**: Healthcare spending (USD)
+- **🔗 Correlations**: Factor interdependencies
 
-🏥 Medical Cost Personal Dataset Analysis
+</td>
+</tr>
+</table>
 
-📊 Dataset Overview
+### 📋 **Data Schema**
+```python
+Dataset Features:
+├── 👤 Demographics: age, gender, children
+├── 🏥 Health Metrics: bmi, smoking_status  
+├── 🌍 Geographic: region (SW, SE, NW, NE)
+└── 💰 Target Variable: medical_charges
+```
 
-- This dataset includes health expenditures of individuals depending on their personal characteristics and lifestyle choices. Various characteristics such as age, gender, body mass index (BMI), number of children, smoking status, region of residence and health expenditures are included. This dataset is used to analyze the factors affecting health expenditures and to understand the general effects of individuals' medical expenses.
+---
 
-🔎 Columns:
+## 🔬 Analysis Methodology
 
-- age: The age of the individual (numerical).
-- gender: The gender of the individual (categorical: 'male', 'female').
-- bmi: Body Mass Index (numerical), the value indicating the ratio of the individual's body weight to height.
-- children: The number of children or dependents covered by insurance (numerical).
-- cigarettes: Whether the individual smokes (categorical: 'yes', 'no').
-- region: The geographical region where the individual lives (categorical: 'southwest', 'southeast', 'northwest', 'northeast').
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" width="50"/><br>
+<b>🧹 Data Cleaning</b><br>
+<small>Missing values & outliers</small>
+</td>
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" width="50"/><br>
+<b>📊 EDA</b><br>
+<small>Statistical exploration</small>
+</td>
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/2942/2942813.png" width="50"/><br>
+<b>🔍 Correlation</b><br>
+<small>Factor relationships</small>
+</td>
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/3004/3004458.png" width="50"/><br>
+<b>💡 Insights</b><br>
+<small>Business recommendations</small>
+</td>
+</tr>
+</table>
 
-- expenditures: The individual's healthcare expenditures (numerical, in USD).
+### 🎯 **Research Framework**
+1. **🔍 Exploratory Analysis**: Understand data patterns and distributions
+2. **📈 Correlation Studies**: Identify key cost-driving factors  
+3. **🗺️ Geographic Analysis**: Regional healthcare cost variations
+4. **🚬 Lifestyle Impact**: Smoking and lifestyle choices analysis
+5. **💰 Cost Prediction**: Factor-based expenditure modeling
 
-- 🎯 Purpose
+---
 
-- The main goal of this analysis is to explore the main factors affecting healthcare expenditures. For the purpose of the analysis, the following will be done:
+## 🛠️ Tech Stack
 
-- The relationship between age, gender, bmi and other factors and expenditures will be explored.
-- Trends in healthcare expenditures by region and smoking status will be determined.
-- The effect of the number of children and bmi on healthcare expenditures will be understood.
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="50"/><br>
+<b>Python</b><br>
+<small>Core Analysis</small>
+</td>
+<td align="center" width="25%">
+<img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" width="50"/><br>
+<b>Pandas</b><br>
+<small>Data Manipulation</small>
+</td>
+<td align="center" width="25%">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg" width="50"/><br>
+<b>NumPy</b><br>
+<small>Numerical Computing</small>
+</td>
+<td align="center" width="25%">
+<img src="https://matplotlib.org/_static/images/logo2.svg" width="60"/><br>
+<b>Matplotlib</b><br>
+<small>Visualization</small>
+</td>
+</tr>
+<tr>
+<td align="center" width="25%">
+<img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" width="50"/><br>
+<b>Seaborn</b><br>
+<small>Statistical Plots</small>
+</td>
+<td align="center" width="25%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" width="50"/><br>
+<b>Jupyter</b><br>
+<small>Interactive Analysis</small>
+</td>
+<td align="center" width="25%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" width="50"/><br>
+<b>Scikit-learn</b><br>
+<small>Statistical Modeling</small>
+</td>
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" width="50"/><br>
+<b>Statistical Analysis</b><br>
+<small>Advanced Analytics</small>
+</td>
+</tr>
+</table>
 
-- 🛠️ Method
+---
 
-- Data Cleaning: Missing values, outliers and formatting errors will be removed.
-- Descriptive Statistics: Summary statistics and visualizations will be made to better understand the relationships.
-- Correlation Analysis: Which factors have a strong correlation with healthcare expenditures will be determined.
+## 🚀 Quick Start
 
-- 📚 Tools and Libraries Used
+```bash
+# Clone the analysis
+git clone https://github.com/Ozan-Mohurcu/Medical-Cost-Analysis.git
+cd Medical-Cost-Analysis
 
-- Python: Pandas, NumPy, Matplotlib, Seaborn
-- Jupyter Notebook: Analysis and visualization
+# Install dependencies
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+
+# Launch analysis
+jupyter notebook medical_cost_analysis.ipynb
+```
+
+---
+
+## 🔍 Expected Insights
+
+<div align="center">
+
+### 🎯 **Key Hypotheses to Explore**
+
+| Factor | Expected Impact | Analysis Type |
+|--------|----------------|---------------|
+| **🚬 Smoking** | Higher medical costs | Comparative analysis |
+| **📈 Age** | Increasing cost correlation | Regression analysis |
+| **⚖️ BMI** | Health risk correlation | Statistical correlation |
+| **🗺️ Region** | Geographic cost variations | Regional analysis |
+| **👶 Children** | Family size impact | Demographic analysis |
+
+</div>
+
+### 💡 **Business Applications**
+- **🏥 Insurance**: Risk assessment and premium calculation
+- **📊 Healthcare Planning**: Resource allocation strategies  
+- **🎯 Prevention Programs**: Lifestyle intervention targeting
+- **💰 Cost Management**: Healthcare expenditure optimization
+
+---
+
+## 📈 Analysis Goals
+
+<table>
+<tr>
+<td width="50%">
+
+### 🔍 **Primary Objectives**
+- **💰 Cost Factor Identification**: Key expense drivers
+- **🚬 Lifestyle Impact Assessment**: Smoking & health behaviors
+- **🗺️ Geographic Pattern Analysis**: Regional variations
+- **👨‍👩‍👧‍👦 Demographic Insights**: Family composition effects
+
+</td>
+<td width="50%">
+
+### 📊 **Analytical Outcomes**
+- **📈 Correlation Matrix**: Factor relationships
+- **🎯 Risk Profiles**: High-cost patient characteristics  
+- **💡 Recommendations**: Cost reduction strategies
+- **📋 Predictive Insights**: Future cost estimation
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📞 Connect
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ozanmhrc/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ozanmhr@gmail.com)
+
+**🔬 Transforming healthcare data into actionable intelligence**
+
+**⭐ Star this repo if you found it helpful!**
+
+</div>
